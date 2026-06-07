@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A76F68D0-6458-49B9-8535-59FC18737CB0}|LeaveTrack\\LeaveTrack.Web.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A76F68D0-6458-49B9-8535-59FC18737CB0}|LeaveTrack\\LeaveTrack.Web.csproj|solutionrelative:leavetrack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A76F68D0-6458-49B9-8535-59FC18737CB0}|LeaveTrack\\LeaveTrack.Web.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A76F68D0-6458-49B9-8535-59FC18737CB0}|LeaveTrack\\LeaveTrack.Web.csproj|solutionrelative:leavetrack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A76F68D0-6458-49B9-8535-59FC18737CB0}|LeaveTrack\\LeaveTrack.Web.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A76F68D0-6458-49B9-8535-59FC18737CB0}|LeaveTrack\\LeaveTrack.Web.csproj|solutionrelative:leavetrack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DBF0BCEC-1B6E-4DAE-A822-DB4D57FAF657}|LeaveTrack.Data\\LeaveTrack.Data.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.data\\migrations\\20260607110659_initalcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -71,13 +71,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack\\Program.cs",
               "RelativeDocumentMoniker": "LeaveTrack\\Program.cs",
               "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack\\Program.cs",
               "RelativeToolTip": "LeaveTrack\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-07T10:57:25.127Z",
               "EditorCaption": ""
@@ -168,13 +168,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack\\appsettings.json",
               "RelativeDocumentMoniker": "LeaveTrack\\appsettings.json",
               "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack\\appsettings.json",
               "RelativeToolTip": "LeaveTrack\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-06-06T13:51:25.457Z",
               "EditorCaption": ""

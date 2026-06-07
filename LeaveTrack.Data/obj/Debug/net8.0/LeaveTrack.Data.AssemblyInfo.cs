@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeaveTrack.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ceb8eba9381714a64ffed4a52712f08d6dd4f02")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeaveTrack.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeaveTrack.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

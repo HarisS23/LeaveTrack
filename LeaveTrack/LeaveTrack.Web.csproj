@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LeaveTrack.Core\LeaveTrack.Core.csproj" />
     <ProjectReference Include="..\LeaveTrack.Data\LeaveTrack.Data.csproj" />
+    <ProjectReference Include="..\LeaveTrack.Services\LeaveTrack.Services.csproj" />
   </ItemGroup>
 
 </Project>

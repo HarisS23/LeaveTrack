@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{94DF84C6-F7F9-4AA9-BB8F-E0F0721646BD}|LeaveTrack.Services\\LeaveTrack.Services.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.services\\services\\approvalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94DF84C6-F7F9-4AA9-BB8F-E0F0721646BD}|LeaveTrack.Services\\LeaveTrack.Services.csproj|solutionrelative:leavetrack.services\\services\\approvalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94DF84C6-F7F9-4AA9-BB8F-E0F0721646BD}|LeaveTrack.Services\\LeaveTrack.Services.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.services\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94DF84C6-F7F9-4AA9-BB8F-E0F0721646BD}|LeaveTrack.Services\\LeaveTrack.Services.csproj|solutionrelative:leavetrack.services\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94DF84C6-F7F9-4AA9-BB8F-E0F0721646BD}|LeaveTrack.Services\\LeaveTrack.Services.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.services\\services\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94DF84C6-F7F9-4AA9-BB8F-E0F0721646BD}|LeaveTrack.Services\\LeaveTrack.Services.csproj|solutionrelative:leavetrack.services\\services\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94DF84C6-F7F9-4AA9-BB8F-E0F0721646BD}|LeaveTrack.Services\\LeaveTrack.Services.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.services\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94DF84C6-F7F9-4AA9-BB8F-E0F0721646BD}|LeaveTrack.Services\\LeaveTrack.Services.csproj|solutionrelative:leavetrack.services\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EA4B93-21D1-416A-B6FF-F7F38226BB69}|LeaveTrack.Core\\LeaveTrack.Core.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.core\\interfaces\\iapprovalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EA4B93-21D1-416A-B6FF-F7F38226BB69}|LeaveTrack.Core\\LeaveTrack.Core.csproj|solutionrelative:leavetrack.core\\interfaces\\iapprovalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EA4B93-21D1-416A-B6FF-F7F38226BB69}|LeaveTrack.Core\\LeaveTrack.Core.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.core\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EA4B93-21D1-416A-B6FF-F7F38226BB69}|LeaveTrack.Core\\LeaveTrack.Core.csproj|solutionrelative:leavetrack.core\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EA4B93-21D1-416A-B6FF-F7F38226BB69}|LeaveTrack.Core\\LeaveTrack.Core.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.core\\interfaces\\ileaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EA4B93-21D1-416A-B6FF-F7F38226BB69}|LeaveTrack.Core\\LeaveTrack.Core.csproj|solutionrelative:leavetrack.core\\interfaces\\ileaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EA4B93-21D1-416A-B6FF-F7F38226BB69}|LeaveTrack.Core\\LeaveTrack.Core.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack.core\\interfaces\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EA4B93-21D1-416A-B6FF-F7F38226BB69}|LeaveTrack.Core\\LeaveTrack.Core.csproj|solutionrelative:leavetrack.core\\interfaces\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A76F68D0-6458-49B9-8535-59FC18737CB0}|LeaveTrack\\LeaveTrack.Web.csproj|c:\\users\\haris\\homebase\\projects\\praksaproject\\leavetrack\\leavetrack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A76F68D0-6458-49B9-8535-59FC18737CB0}|LeaveTrack\\LeaveTrack.Web.csproj|solutionrelative:leavetrack\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -54,11 +86,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Services\\Services\\ReportService.cs",
+              "RelativeDocumentMoniker": "LeaveTrack.Services\\Services\\ReportService.cs",
+              "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Services\\Services\\ReportService.cs",
+              "RelativeToolTip": "LeaveTrack.Services\\Services\\ReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:44:57.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "LeaveRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Services\\Services\\LeaveRequestService.cs",
+              "RelativeDocumentMoniker": "LeaveTrack.Services\\Services\\LeaveRequestService.cs",
+              "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Services\\Services\\LeaveRequestService.cs",
+              "RelativeToolTip": "LeaveTrack.Services\\Services\\LeaveRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:44:51.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Services\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "LeaveTrack.Services\\Services\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Services\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "LeaveTrack.Services\\Services\\EmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:44:43.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApprovalService.cs",
+              "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Services\\Services\\ApprovalService.cs",
+              "RelativeDocumentMoniker": "LeaveTrack.Services\\Services\\ApprovalService.cs",
+              "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Services\\Services\\ApprovalService.cs",
+              "RelativeToolTip": "LeaveTrack.Services\\Services\\ApprovalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:44:35.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IReportService.cs",
+              "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Interfaces\\IReportService.cs",
+              "RelativeDocumentMoniker": "LeaveTrack.Core\\Interfaces\\IReportService.cs",
+              "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Interfaces\\IReportService.cs",
+              "RelativeToolTip": "LeaveTrack.Core\\Interfaces\\IReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:43:45.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Interfaces\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "LeaveTrack.Core\\Interfaces\\IEmployeeService.cs",
+              "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Interfaces\\IEmployeeService.cs",
+              "RelativeToolTip": "LeaveTrack.Core\\Interfaces\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:43:38.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IApprovalService.cs",
+              "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Interfaces\\IApprovalService.cs",
+              "RelativeDocumentMoniker": "LeaveTrack.Core\\Interfaces\\IApprovalService.cs",
+              "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Interfaces\\IApprovalService.cs",
+              "RelativeToolTip": "LeaveTrack.Core\\Interfaces\\IApprovalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:43:31.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ILeaveRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Interfaces\\ILeaveRequestService.cs",
+              "RelativeDocumentMoniker": "LeaveTrack.Core\\Interfaces\\ILeaveRequestService.cs",
+              "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Interfaces\\ILeaveRequestService.cs",
+              "RelativeToolTip": "LeaveTrack.Core\\Interfaces\\ILeaveRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T11:43:23.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "20260607110659_InitalCreate.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Data\\Migrations\\20260607110659_InitalCreate.cs",
               "RelativeDocumentMoniker": "LeaveTrack.Data\\Migrations\\20260607110659_InitalCreate.cs",
@@ -66,25 +202,24 @@
               "RelativeToolTip": "LeaveTrack.Data\\Migrations\\20260607110659_InitalCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T11:06:59.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-07T11:06:59.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack\\Program.cs",
               "RelativeDocumentMoniker": "LeaveTrack\\Program.cs",
               "ToolTip": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack\\Program.cs",
               "RelativeToolTip": "LeaveTrack\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-07T10:57:25.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Data\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "LeaveTrack.Data\\Data\\AppDbContext.cs",
@@ -96,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "LeaveRequestStatus.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Models\\LeaveRequestStatus.cs",
               "RelativeDocumentMoniker": "LeaveTrack.Core\\Models\\LeaveRequestStatus.cs",
@@ -108,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "LeaveRequest.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Models\\LeaveRequest.cs",
               "RelativeDocumentMoniker": "LeaveTrack.Core\\Models\\LeaveRequest.cs",
@@ -120,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Models\\Role.cs",
               "RelativeDocumentMoniker": "LeaveTrack.Core\\Models\\Role.cs",
@@ -132,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "LeaveTrack.Core\\Models\\Employee.cs",
@@ -144,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "LeaveType.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Core\\Models\\LeaveType.cs",
               "RelativeDocumentMoniker": "LeaveTrack.Core\\Models\\LeaveType.cs",
@@ -156,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "LeaveTrack.Data.csproj",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Data\\LeaveTrack.Data.csproj",
               "RelativeDocumentMoniker": "LeaveTrack.Data\\LeaveTrack.Data.csproj",
@@ -168,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack\\appsettings.json",
               "RelativeDocumentMoniker": "LeaveTrack\\appsettings.json",
@@ -176,12 +311,11 @@
               "RelativeToolTip": "LeaveTrack\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-06T13:51:25.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-06T13:51:25.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\haris\\HomeBase\\Projects\\PraksaProject\\LeaveTrack\\LeaveTrack.Tests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "LeaveTrack.Tests\\UnitTest1.cs",
