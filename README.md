@@ -43,7 +43,7 @@ dotnet ef database update
 5. Run the application
 dotnet run
 
-The application will be available at `https://localhost:5001`
+The application will be available at `https://localhost:7291`
 
 ## Running Tests
 dotnet test
