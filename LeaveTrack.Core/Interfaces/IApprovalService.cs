@@ -8,5 +8,7 @@ namespace LeaveTrack.Core.Interfaces
 {
     public interface IApprovalService
     {
+        Task<(bool Success, string? ErrorMessage)> ApproveAsync(int leaveRequestId);
+        Task<(bool Success, string? ErrorMessage)> RejectAsync(int leaveRequestId, string rejectionReason);
     }
 }

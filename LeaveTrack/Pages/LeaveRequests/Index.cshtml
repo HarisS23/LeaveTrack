@@ -1,0 +1,111 @@
+﻿@page
+@model LeaveTrack.Web.Pages.LeaveRequests.IndexModel
+@{
+    ViewData["Title"] = "Leave Requests";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Leave Requests</h2>
+        <a asp-page="Create" class="btn btn-primary">New Request</a>
+    </div>
+
+    <!-- Filters -->
+    <form method="get" class="card p-3 mb-4">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <label class="form-label">Search Employee</label>
+                <input type="text" name="searchName" value="@Model.SearchName" class="form-control" placeholder="Name..." />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Status</label>
+                <select name="statusId" class="form-select">
+                    <option value="">All</option>
+                    @foreach (var status in Model.Statuses)
+                    {
+                        <option value="@status.Id" selected="@(Model.StatusId == status.Id)">@status.PrettyName</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Leave Type</label>
+                <select name="leaveTypeId" class="form-select">
+                    <option value="">All</option>
+                    @foreach (var type in Model.LeaveTypes)
+                    {
+                        <option value="@type.Id" selected="@(Model.LeaveTypeId == type.Id)">@type.PrettyName</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">From</label>
+                <input type="date" name="startDate" value="@Model.StartDate?.ToString("yyyy-MM-dd")" class="form-control" />
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">To</label>
+                <input type="date" name="endDate" value="@Model.EndDate?.ToString("yyyy-MM-dd")" class="form-control" />
+            </div>
+            <div class="col-md-1 d-flex align-items-end">
+                <button type="submit" class="btn btn-secondary w-100">Filter</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Results -->
+    <div class="card">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Employee</th>
+                        <th>Type</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Days</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.LeaveRequests.Any())
+                    {
+                        <tr>
+                            <td colspan="8" class="text-center text-muted py-4">No leave requests found.</td>
+                        </tr>
+                    }
+                    @foreach (var request in Model.LeaveRequests)
+                    {
+                        <tr>
+                            <td>@request.Employee.FirstName @request.Employee.LastName</td>
+                            <td>@request.LeaveType.PrettyName</td>
+                            <td>@request.StartDate.ToString("dd MMM yyyy")</td>
+                            <td>@request.EndDate.ToString("dd MMM yyyy")</td>
+                            <td>@((request.EndDate - request.StartDate).Days + 1)</td>
+                            <td>
+                                <span class="badge @GetStatusBadge(request.LeaveRequestStatusId)">
+                                    @request.LeaveRequestStatus.PrettyName
+                                </span>
+                            </td>
+                            <td>@request.CreatedAt.ToString("dd MMM yyyy")</td>
+                            <td>
+                                <a asp-page="Detail" asp-route-id="@request.Id" class="btn btn-sm btn-outline-secondary">View</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@functions {
+    string GetStatusBadge(int statusId) => statusId switch
+    {
+        1 => "bg-warning text-dark",
+        2 => "bg-success",
+        3 => "bg-danger",
+        4 => "bg-secondary",
+        _ => "bg-light text-dark"
+    };
+}
