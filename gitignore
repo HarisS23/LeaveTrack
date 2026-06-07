@@ -4,6 +4,9 @@ obj/
 
 # Visual Studio files
 .vs/
+*.vsidx
+*.vstidx
+*.lock
 *.user
 *.suo
 *.userosscache
