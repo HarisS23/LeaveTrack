@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeaveTrack.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ceb8eba9381714a64ffed4a52712f08d6dd4f02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80d7a2ea03ce135f6b91de47a7280dd5ce54e181")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeaveTrack.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeaveTrack.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
