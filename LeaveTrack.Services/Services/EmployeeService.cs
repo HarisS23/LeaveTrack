@@ -41,12 +41,15 @@ namespace LeaveTrack.Services.Services
             var employee = await _context.Employees.FindAsync(employeeId);
             if (employee == null) return 0;
 
-            var approvedVacationDays = await _context.LeaveRequests
+            var approvedVacationRequests = await _context.LeaveRequests
                 .Where(r =>
                     r.EmployeeId == employeeId &&
                     r.LeaveTypeId == (int)LeaveTypeEnum.Vacation &&
                     r.LeaveRequestStatusId == (int)LeaveRequestStatusEnum.Approved)
-                .SumAsync(r => (r.EndDate - r.StartDate).Days + 1);
+                .ToListAsync();
+
+            var approvedVacationDays = approvedVacationRequests
+                .Sum(r => (r.EndDate - r.StartDate).Days + 1);
 
             return employee.YearlyLeaveBalance - approvedVacationDays;
         }

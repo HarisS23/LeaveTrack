@@ -1,4 +1,138 @@
-﻿@page
+﻿@page "{id:int}"
 @model LeaveTrack.Web.Pages.LeaveRequests.DetailModel
 @{
+    ViewData["Title"] = "Leave Request Detail";
 }
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Leave Request Detail</h2>
+        <a asp-page="Index" class="btn btn-outline-secondary">Back to List</a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="row g-4">
+        <!-- Main Details -->
+        <div class="col-md-8">
+            <div class="card p-4">
+                <h5 class="mb-4">Request Information</h5>
+                <dl class="row">
+                    <dt class="col-sm-4">Employee</dt>
+                    <dd class="col-sm-8">@Model.LeaveRequest.Employee.FirstName @Model.LeaveRequest.Employee.LastName</dd>
+
+                    <dt class="col-sm-4">Leave Type</dt>
+                    <dd class="col-sm-8">@Model.LeaveRequest.LeaveType.PrettyName</dd>
+
+                    <dt class="col-sm-4">Start Date</dt>
+                    <dd class="col-sm-8">@Model.LeaveRequest.StartDate.ToString("dd MMM yyyy")</dd>
+
+                    <dt class="col-sm-4">End Date</dt>
+                    <dd class="col-sm-8">@Model.LeaveRequest.EndDate.ToString("dd MMM yyyy")</dd>
+
+                    <dt class="col-sm-4">Total Days</dt>
+                    <dd class="col-sm-8">@((Model.LeaveRequest.EndDate - Model.LeaveRequest.StartDate).Days + 1) days</dd>
+
+                    <dt class="col-sm-4">Status</dt>
+                    <dd class="col-sm-8">
+                        <span class="badge @Model.StatusBadge">
+                            @Model.LeaveRequest.LeaveRequestStatus.PrettyName
+                        </span>
+                    </dd>
+
+                    <dt class="col-sm-4">Submitted</dt>
+                    <dd class="col-sm-8">@Model.LeaveRequest.CreatedAt.ToString("dd MMM yyyy HH:mm")</dd>
+
+                    @if (!string.IsNullOrWhiteSpace(Model.LeaveRequest.Comment))
+                    {
+                        <dt class="col-sm-4">Comment</dt>
+                        <dd class="col-sm-8">@Model.LeaveRequest.Comment</dd>
+                    }
+
+                    @if (!string.IsNullOrWhiteSpace(Model.LeaveRequest.RejectionReason))
+                    {
+                        <dt class="col-sm-4">Rejection Reason</dt>
+                        <dd class="col-sm-8 text-danger">@Model.LeaveRequest.RejectionReason</dd>
+                    }
+                </dl>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="col-md-4">
+            <div class="card p-4">
+                <h5 class="mb-4">Actions</h5>
+
+                @if (Model.IsPending)
+                {
+                    <!-- Manager actions -->
+                    <form method="post" asp-page-handler="Approve" class="mb-2">
+                        <input type="hidden" name="id" value="@Model.LeaveRequest.Id" />
+                        <button type="submit" class="btn btn-success w-100">Approve</button>
+                    </form>
+
+                    <button type="button" class="btn btn-danger w-100 mb-2"
+                            data-bs-toggle="collapse" data-bs-target="#rejectForm">
+                        Reject
+                    </button>
+
+                    <div class="collapse mb-2" id="rejectForm">
+                        <form method="post" asp-page-handler="Reject">
+                            <input type="hidden" name="id" value="@Model.LeaveRequest.Id" />
+                            <div class="mb-2">
+                                <label class="form-label">Rejection Reason</label>
+                                <textarea name="rejectionReason" class="form-control" rows="3"
+                                          placeholder="Required..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-danger w-100">Confirm Rejection</button>
+                        </form>
+                    </div>
+
+                    <!-- Employee actions -->
+                    <a asp-page="Edit" asp-route-id="@Model.LeaveRequest.Id"
+                       class="btn btn-outline-primary w-100 mb-2">Edit Request</a>
+
+                    <form method="post" asp-page-handler="Cancel">
+                        <input type="hidden" name="id" value="@Model.LeaveRequest.Id" />
+                        <button type="submit" class="btn btn-outline-secondary w-100"
+                                onclick="return confirm('Are you sure you want to cancel this request?')">
+                            Cancel Request
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <p class="text-muted">No actions available for this request.</p>
+                }
+            </div>
+
+            <div class="card p-4 mt-3">
+                <h5 class="mb-3">Leave Balance</h5>
+                <div class="d-flex justify-content-between">
+                    <span class="text-muted">Yearly allowance</span>
+                    <strong>@Model.LeaveRequest.Employee.YearlyLeaveBalance days</strong>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <span class="text-muted">Remaining</span>
+                    <strong class="@(Model.RemainingBalance < 5 ? "text-danger" : "text-success")">
+                        @Model.RemainingBalance days
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -36,12 +36,6 @@ namespace LeaveTrack.Web.Pages.LeaveRequests
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                await PopulateDropdownsAsync();
-                return Page();
-            }
-
             if (Request.EndDate < Request.StartDate)
             {
                 ModelState.AddModelError(string.Empty, "End date cannot be before start date.");
@@ -59,6 +53,7 @@ namespace LeaveTrack.Web.Pages.LeaveRequests
             Request.LeaveRequestStatusId = (int)LeaveRequestStatusEnum.Pending;
             Request.CreatedAt = DateTime.UtcNow;
 
+
             await _leaveRequestService.CreateAsync(Request);
 
             TempData["Success"] = "Leave request submitted successfully.";
@@ -71,11 +66,14 @@ namespace LeaveTrack.Web.Pages.LeaveRequests
                 .OrderBy(e => e.LastName)
                 .ToListAsync();
 
+            Console.WriteLine(employees.Count);
+
             var leaveTypes = await _context.LeaveTypes
                 .ToListAsync();
 
             EmployeeList = new SelectList(
-                employees, "Id", "LastName");
+                employees.Select(e => new { e.Id, FullName = $"{e.FirstName} {e.LastName}" }),
+                "Id", "FullName");
 
             LeaveTypeList = new SelectList(
                 leaveTypes, "Id", "PrettyName");

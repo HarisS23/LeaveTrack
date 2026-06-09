@@ -1,4 +1,95 @@
-﻿@page
+﻿@page "{id:int}"
 @model LeaveTrack.Web.Pages.LeaveRequests.EditModel
 @{
+    ViewData["Title"] = "Edit Leave Request";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Edit Leave Request</h2>
+        <a asp-page="Detail" asp-route-id="@Model.Request.Id" class="btn btn-outline-secondary">Back to Detail</a>
+    </div>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card p-4" style="max-width: 600px;">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+            <input type="hidden" asp-for="Request.Id" />
+            <input type="hidden" asp-for="Request.EmployeeId" />
+            <input type="hidden" asp-for="Request.LeaveRequestStatusId" />
+            <input type="hidden" asp-for="Request.CreatedAt" />
+
+            <div class="mb-3">
+                <label class="form-label">Employee</label>
+                <input type="text" class="form-control"
+                       value="@Model.Request.Employee.FirstName @Model.Request.Employee.LastName"
+                       disabled />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Leave Type</label>
+                <select asp-for="Request.LeaveTypeId" asp-items="Model.LeaveTypeList"
+                        class="form-select" required>
+                    <option value="">-- Select Leave Type --</option>
+                </select>
+                <span asp-validation-for="Request.LeaveTypeId" class="text-danger"></span>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Start Date</label>
+                    <input asp-for="Request.StartDate" type="date" class="form-control" />
+                    <span asp-validation-for="Request.StartDate" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label class="form-label">End Date</label>
+                    <input asp-for="Request.EndDate" type="date" class="form-control" />
+                    <span asp-validation-for="Request.EndDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Comment <span class="text-muted">(optional)</span></label>
+                <textarea asp-for="Request.Comment" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <a asp-page="Detail" asp-route-id="@Model.Request.Id"
+                   class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        const startDateInput = document.getElementById('Request_StartDate');
+        const endDateInput = document.getElementById('Request_EndDate');
+
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const tomorrowStr = tomorrow.toISOString().split('T')[0];
+
+        startDateInput.min = tomorrowStr;
+        endDateInput.min = startDateInput.value || tomorrowStr;
+
+        startDateInput.addEventListener('change', function () {
+            const selectedStart = this.value;
+            endDateInput.min = selectedStart;
+
+            if (endDateInput.value && endDateInput.value < selectedStart) {
+                endDateInput.value = selectedStart;
+            }
+        });
+    </script>
 }
