@@ -36,12 +36,6 @@ namespace LeaveTrack.Web.Pages.Admin.Employees
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                await PopulateDropdownsAsync();
-                return Page();
-            }
-
             await _employeeService.UpdateAsync(Employee);
             TempData["Success"] = "Employee updated successfully.";
             return RedirectToPage("Index");
