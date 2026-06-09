@@ -1,0 +1,70 @@
+﻿@page
+@model LeaveTrack.Web.Pages.Admin.Employees.IndexModel
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Employees</h2>
+        <a asp-page="Create" class="btn btn-primary">Add Employee</a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Yearly Balance</th>
+                        <th>Remaining</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Employees.Any())
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">No employees found.</td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.Employees)
+                    {
+                        <tr>
+                            <td>@item.Employee.FirstName @item.Employee.LastName</td>
+                            <td>@item.Employee.Email</td>
+                            <td>@item.Employee.Role.PrettyName</td>
+                            <td>@item.Employee.YearlyLeaveBalance days</td>
+                            <td>
+                                <span class="@(item.RemainingBalance < 5 ? "text-danger fw-bold" : "text-success")">
+                                    @item.RemainingBalance days
+                                </span>
+                            </td>
+                            <td>
+                                <a asp-page="Edit" asp-route-id="@item.Employee.Id"
+                                   class="btn btn-sm btn-outline-primary">Edit</a>
+                                <form method="post" asp-page-handler="Delete" class="d-inline">
+                                    <input type="hidden" name="id" value="@item.Employee.Id" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger"
+                                            onclick="return confirm('Are you sure you want to delete this employee?')">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
