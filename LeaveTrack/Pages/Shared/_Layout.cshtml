@@ -7,57 +7,151 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LeaveTrack.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background: #ffffff !important;
+            border-bottom: 1px solid #e9ecef !important;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            padding: 0.75rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #3b5bdb !important;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            color: #495057 !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.5rem 0.85rem !important;
+            border-radius: 6px;
+            transition: background 0.15s, color 0.15s;
+        }
+
+            .nav-link:hover {
+                background-color: #f1f3f9;
+                color: #3b5bdb !important;
+            }
+
+            .nav-link.active-nav {
+                background-color: #e7ecfd;
+                color: #3b5bdb !important;
+            }
+
+        .nav-separator {
+            width: 1px;
+            background-color: #e9ecef;
+            margin: 0 0.5rem;
+            height: 20px;
+            align-self: center;
+        }
+
+        main {
+            padding-top: 1.5rem;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding: 1.25rem 0;
+            font-size: 0.85rem;
+            color: #adb5bd !important;
+            border-top: 1px solid #e9ecef !important;
+        }
+
+            .footer a {
+                color: #adb5bd;
+                text-decoration: none;
+            }
+
+                .footer a:hover {
+                    color: #3b5bdb;
+                }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/LeaveRequests/Index">LeaveTrack</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-page="/LeaveRequests/Index">
+                    &#128197; LeaveTrack
+                </a>
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav me-auto d-flex align-items-center gap-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-page="/LeaveRequests/Index">Leave Requests</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString()?.StartsWith("/LeaveRequests") == true ? "active-nav" : "")"
+                               asp-page="/LeaveRequests/Index">
+                                Requests
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-page="/Manager/Index">Manager</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString()?.StartsWith("/Manager") == true ? "active-nav" : "")"
+                               asp-page="/Manager/Index">
+                                Manager
+                            </a>
+                        </li>
+                        <div class="nav-separator"></div>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString()?.StartsWith("/Admin/Employees") == true ? "active-nav" : "")"
+                               asp-page="/Admin/Employees/Index">
+                                Employees
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-page="/Admin/Employees/Index">Employees</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString()?.StartsWith("/Admin/Reports") == true ? "active-nav" : "")"
+                               asp-page="/Admin/Reports/Index">
+                                Reports
+                            </a>
+                        </li>
+                        <div class="nav-separator"></div>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString()?.StartsWith("/Balance") == true ? "active-nav" : "")"
+                               asp-page="/Balance/Index">
+                                Balance
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-page="/Admin/Reports/Index">Reports</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-page="/Balance/Index">Balance</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-page="/Dashboard/Index">Dashboard</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["page"]?.ToString()?.StartsWith("/Dashboard") == true ? "active-nav" : "")"
+                               asp-page="/Dashboard/Index">
+                                Dashboard
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - LeaveTrack - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="footer">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span>&copy; 2026 LeaveTrack</span>
+            <span>Internal Leave Management System</span>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
