@@ -1,7 +1,7 @@
 ﻿using LeaveTrack.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace LeaveTrack.Data.Data
+namespace LeaveTrack.Data
 {
     public class AppDbContext : DbContext
     {
