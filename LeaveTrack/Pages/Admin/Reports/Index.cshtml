@@ -1,4 +1,111 @@
 ﻿@page
 @model LeaveTrack.Web.Pages.Admin.Reports.IndexModel
 @{
+    ViewData["Title"] = "Reports";
 }
+
+<div class="container mt-4">
+    <h2 class="mb-4">Reports</h2>
+
+    <!-- Approved Days Per Employee -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">Approved Leave Days Per Employee</h5>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Employee</th>
+                        <th>Role</th>
+                        <th>Yearly Balance</th>
+                        <th>Approved Days</th>
+                        <th>Remaining</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.ApprovedDaysPerEmployee.Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-4">No data available.</td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.ApprovedDaysPerEmployee)
+                    {
+                        <tr>
+                            <td>@item.Employee.FirstName @item.Employee.LastName</td>
+                            <td>@item.Employee.Role.PrettyName</td>
+                            <td>@item.Employee.YearlyLeaveBalance days</td>
+                            <td>@item.ApprovedDays days</td>
+                            <td>
+                                <span class="@(item.Employee.YearlyLeaveBalance - item.ApprovedDays < 5 ? "text-danger fw-bold" : "text-success")">
+                                    @(item.Employee.YearlyLeaveBalance - item.ApprovedDays) days
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Requests Grouped By Status -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">Requests By Status</h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                @foreach (var item in Model.RequestsByStatus)
+                {
+                    <div class="col-md-3">
+                        <div class="card text-center p-3">
+                            <h3 class="mb-1">@item.Count</h3>
+                            <span class="text-muted">@item.StatusName</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Approved Leave -->
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Upcoming Approved Leave (Next 30 Days)</h5>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Employee</th>
+                        <th>Leave Type</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Days</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.UpcomingLeave.Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-4">
+                                No upcoming approved leave in the next 30 days.
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var request in Model.UpcomingLeave)
+                    {
+                        <tr>
+                            <td>@request.Employee.FirstName @request.Employee.LastName</td>
+                            <td>@request.LeaveType.PrettyName</td>
+                            <td>@request.StartDate.ToString("dd MMM yyyy")</td>
+                            <td>@request.EndDate.ToString("dd MMM yyyy")</td>
+                            <td>@((request.EndDate - request.StartDate).Days + 1)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

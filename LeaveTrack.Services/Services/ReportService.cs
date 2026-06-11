@@ -23,6 +23,7 @@ namespace LeaveTrack.Services.Services
         public async Task<IEnumerable<(Employee Employee, int ApprovedDays)>> GetApprovedDaysPerEmployeeAsync()
         {
             var employees = await _context.Employees
+                .Include(e => e.Role)
                 .Include(e => e.LeaveRequests)
                 .ToListAsync();
 
