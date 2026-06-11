@@ -1,7 +1,6 @@
 using LeaveTrack.Core.Interfaces;
 using LeaveTrack.Core.Models;
 using LeaveTrack.Data;
-using LeaveTrack.Data.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;

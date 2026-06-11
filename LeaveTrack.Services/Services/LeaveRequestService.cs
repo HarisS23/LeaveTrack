@@ -1,7 +1,7 @@
 ﻿using LeaveTrack.Core.Enums;
 using LeaveTrack.Core.Interfaces;
 using LeaveTrack.Core.Models;
-using LeaveTrack.Data.Data;
+using LeaveTrack.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

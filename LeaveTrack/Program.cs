@@ -1,5 +1,5 @@
 using LeaveTrack.Core.Interfaces;
-using LeaveTrack.Data.Data;
+using LeaveTrack.Data;
 using LeaveTrack.Services.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
